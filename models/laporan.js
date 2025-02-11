@@ -24,8 +24,8 @@ module.exports = (sequelize, DataTypes) => {
 			tindakan: DataTypes.TEXT,
 			gambar: DataTypes.STRING,
 			analisa: DataTypes.TEXT,
-			waktu_mulai_mesin: DataTypes.DATE,
-			waktu_selesai_mesin: DataTypes.DATE,
+			waktu_mulai_mesin: DataTypes.STRING,
+			waktu_selesai_mesin: DataTypes.STRING,
 		},
 		{
 			sequelize,

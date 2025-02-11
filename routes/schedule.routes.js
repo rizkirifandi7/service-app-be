@@ -8,6 +8,8 @@ const {
 	updateSchedule,
 	deleteSchedule,
 } = require("../controllers/schedule.controller");
+
+
 const authenticateJWT = require("../middleware/verifyToken");
 
 router.get("/", getAllSchedule);

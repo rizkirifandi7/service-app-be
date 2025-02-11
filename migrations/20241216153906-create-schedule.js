@@ -15,10 +15,16 @@ module.exports = {
 			line: {
 				type: Sequelize.STRING,
 			},
+			mesin: {
+				type: Sequelize.TEXT,
+			},
 			kerusakan: {
 				type: Sequelize.TEXT,
 			},
-			tanggal_perbaikan: {
+			maintenance: {
+				type: Sequelize.TEXT,
+			},
+			tanggal: {
 				type: Sequelize.DATE,
 			},
 			pic: {

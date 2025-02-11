@@ -17,8 +17,11 @@ module.exports = (sequelize, DataTypes) => {
 	Schedule.init(
 		{
 			id_user: DataTypes.INTEGER,
-			mesin: DataTypes.STRING,
-			tanggal_perbaikan: DataTypes.DATE,
+			line: DataTypes.STRING,
+			mesin: DataTypes.TEXT,
+			kerusakan: DataTypes.TEXT,
+			maintenance: DataTypes.TEXT,
+			tanggal: DataTypes.DATE,
 			pic: DataTypes.STRING,
 			status: DataTypes.STRING,
 		},

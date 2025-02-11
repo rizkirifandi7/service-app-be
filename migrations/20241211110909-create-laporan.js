@@ -34,10 +34,10 @@ module.exports = {
 				type: Sequelize.TEXT,
 			},
 			waktu_selesai_mesin: {
-				type: Sequelize.DATE,
+				type: Sequelize.STRING,
 			},
 			waktu_mulai_mesin: {
-				type: Sequelize.DATE,
+				type: Sequelize.STRING,
 			},
 			createdAt: {
 				allowNull: false,
