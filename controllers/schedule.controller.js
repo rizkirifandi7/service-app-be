@@ -49,7 +49,7 @@ const getScheduleById = async (req, res) => {
 const createSchedule = async (req, res) => {
 	try {
 		const user = req.user;
-		const { line, mesin, kerusakan, tanggal, pic, status, maintenance } =
+		const { line, mesin, kerusakan, tanggal, pic, status, maintenance, overtime } =
 			req.body;
 
 		const schedule = await Schedule.create({
@@ -61,6 +61,7 @@ const createSchedule = async (req, res) => {
 			pic,
 			status,
 			maintenance,
+			overtime
 		});
 		res.status(201).json({
 			data: schedule,
@@ -74,7 +75,7 @@ const createSchedule = async (req, res) => {
 const updateSchedule = async (req, res) => {
 	try {
 		const { id } = req.params;
-		const { line, mesin, kerusakan, tanggal, pic, status, maintenance } =
+		const { line, mesin, kerusakan, tanggal, pic, status, maintenance, overtime } =
 			req.body;
 
 		const schedule = await Schedule.findOne({ where: { id } });
@@ -92,6 +93,7 @@ const updateSchedule = async (req, res) => {
 				pic,
 				maintenance,
 				status,
+				overtime
 			},
 			{ where: { id } }
 		);
