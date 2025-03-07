@@ -33,10 +33,13 @@ module.exports = {
 			analisa: {
 				type: Sequelize.TEXT,
 			},
-			waktu_selesai_mesin: {
+			tanggal: {
+				type: Sequelize.DATE,
+			},
+			stop_trouble: {
 				type: Sequelize.STRING,
 			},
-			waktu_mulai_mesin: {
+			start_trouble: {
 				type: Sequelize.STRING,
 			},
 			createdAt: {

@@ -58,8 +58,9 @@ const createLaporan = async (req, res, next) => {
 			deskripsi_kerusakan,
 			tindakan,
 			analisa,
-			waktu_selesai_mesin,
-			waktu_mulai_mesin,
+			tanggal,
+			stop_trouble,
+			start_trouble,
 		} = req.body;
 
 		const user = req.user;
@@ -74,8 +75,9 @@ const createLaporan = async (req, res, next) => {
 			deskripsi_kerusakan,
 			tindakan,
 			analisa,
-			waktu_selesai_mesin,
-			waktu_mulai_mesin,
+			tanggal,
+			stop_trouble,
+			start_trouble,
 		});
 
 		// If create is successful, upload to cloudinary
@@ -115,8 +117,9 @@ const updateLaporan = async (req, res, next) => {
 			deskripsi_kerusakan,
 			tindakan,
 			analisa,
-			waktu_selesai_mesin,
-			waktu_mulai_mesin,
+			tanggal,
+			stop_trouble,
+			start_trouble,
 		} = req.body;
 
 		const laporan = await Laporan.findByPk(id);
@@ -146,8 +149,9 @@ const updateLaporan = async (req, res, next) => {
 				deskripsi_kerusakan,
 				tindakan,
 				analisa,
-				waktu_selesai_mesin,
-				waktu_mulai_mesin,
+				tanggal,
+				stop_trouble,
+				start_trouble,
 				gambar,
 			},
 			{ where: { id } }
